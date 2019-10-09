@@ -114,7 +114,7 @@ function lowScores(req, res) {
             response.push(ads[i]);
     }
 
-    res.send(response.sort((a, b) => a - b));
+    res.send(response.sort((a, b) => a.score - b.score));
 }
 
 function ads(req, res) {
@@ -126,7 +126,7 @@ function ads(req, res) {
             response.push(ads[i]);
     }
 
-    res.send(response.sort((a, b) => b - a));
+    res.send(response.sort((a, b) => b.score - a.score));
 }
 
 // Help Tools
